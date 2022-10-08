@@ -44,10 +44,36 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
 }
 
 [class*="__container"] {
-    max-width: 1057px;
+    max-width: 1087px;
     margin: 0 auto;
+    padding: 0 15px;
 }
-.header {}
+
+@media (max-width: 1087px) {
+    [class*="__container"] {
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 991px) {
+    [class*="__container"] {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+    [class*="__container"] {
+        max-width: none;
+    }
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
 
 .header__container {
     display: flex;
@@ -77,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
 }
 
 .menu__item {
-    margin: 0 40px 0 0;
+    margin: 0 30px 0 0;
 }
 
 .menu__link {
@@ -88,6 +114,21 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
     line-height: 1.2;
     color: #000;
     letter-spacing: 1px;
+}
+
+@media (max-width: 991px) {
+
+    .header__container {
+        min-height: 80px;
+    }
+
+    .header__button {
+        flex: 0 0 170px;
+    }
+
+    .menu__item {
+        margin: 0 20px 0 0;
+    }
 }
 
 .button {
@@ -113,4 +154,14 @@ h1, h2, h3, h4, h5, h6 {font-size: inherit; font-weight: 400;}
 }
 .button-blue:hover {
     background-color: #4295F4;
+}
+
+.icon__menu {
+    position: relative;
+    flex: 0 0 30px;
+    height: 18px;
+}
+
+.icon__menu span {
+    background-color: #000;
 }
